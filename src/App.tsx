@@ -1,10 +1,10 @@
 import { useState } from "react"
 import { JobCard } from "./components/job-card"
-import type {  Filter, Language, Tool } from "./types/job"
+import type { Filter, Job } from "./types/job"
 import IconRemove from "../public/images/icon-remove.svg"
 
 function App() {
-  const jobs = [
+const jobs: Job[] = [
     {
       "id": 1,
       "company": "Photosnap",
