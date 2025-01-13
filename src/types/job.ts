@@ -16,8 +16,8 @@ export interface Job {
   postedAt: string
   contract: string
   location: string
-  languages: Language[]
-  tools: Tool[]
+languages: readonly Language[]
+tools: readonly Tool[]
 }
 
 export type FilterType = 'role' | 'level' | 'language' | 'tool'

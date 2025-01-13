@@ -155,7 +155,7 @@ function App() {
       "languages": ["JavaScript"],
       "tools": ["React", "Sass"]
     }
-  ] as const;
+];
 
   const [activeFilters, setActiveFilters] = useState<Filter[]>([]);
 
@@ -187,9 +187,9 @@ function App() {
         case 'level':
           return job.level === filter.value;
         case 'language':
-          return job.languages.includes(filter.value as Language);
+        return job.languages.includes(filter.value as typeof job.languages[number]);
         case 'tool':
-          return job.tools.includes(filter.value as Tool);
+        return job.tools.includes(filter.value as typeof job.tools[number]);
         default:
           return false;
       }
